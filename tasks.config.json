@@ -1,0 +1,38 @@
+{
+  "components-directory-path": "src/components",
+  "server-config": {
+    "rulesetName": "DXSample",
+    "rulesetVersion": "01-01-01",
+    "sourceOfComponents": "Server",
+    "devBuild": false,
+    "serverType": "infinity",
+    "server": "https://bluerosetech01.pegalabs.io/prweb",
+    "clientId": "25431891239133623312",
+    "clientSecret_comment": "Needed only when using 'passwordCreds' or 'clientCreds' grantType",
+    "clientSecret": "D710B1B7F7825E4B82798709D83F5826",
+    "grantType": "passwordCreds",
+    "redirectUri": "https://localhost:4010/",
+    "authService_comment": "Infinity authentication service alias (when grantType is set to 'authCode')",
+    "cert_and_key_comment": "Path to SSL certificate file and SSL key file to use when starting local HTTPS server",
+    "cert_and_key_comment2": "Needed only when using 'authCode' grantType and redirectUri begins with 'https://localhost'",
+    "cert": "./keys/dxcb.crt",
+    "key": "./keys/dxcb.key",
+    "user_and_password_comment": "useful primarily when grantType is set to 'passwordCreds'",
+    "user": "svalappil",
+    "password": "rules@123",
+    "questions_comment": "useful for designating how frequently questions should be asked during npm run authenticate",
+    "questions_askAlways": "",
+    "questions_askNever": "",
+    "questions_askOnce": "server,authService",
+    "questions_askedOnce": "server"
+  },
+  "component": {
+    "library": "Extensions",
+    "type": "",
+    "version": "1.0.0",
+    "subtype": "",
+    "description": "",
+    "icon": ""
+  },
+  "usePromotedWebPack": false
+}
