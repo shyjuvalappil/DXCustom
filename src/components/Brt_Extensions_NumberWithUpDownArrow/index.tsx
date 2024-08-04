@@ -21,7 +21,7 @@ import styled from 'styled-components';
 
 const DownArrowIcon = styled.span`
   position: absolute;
-  top: 50%;
+  top: 65%;
   right: 0px;
   transform: translateY(-20%);
   cursor: pointer;
@@ -33,7 +33,7 @@ const DownArrowIcon = styled.span`
 
 const UpArrowIcon = styled.span`
   position: absolute;
-  bottom: 30%;
+  bottom: 10%;
   right: 0px;
   transform: translateY(-50%);
   cursor: pointer;
@@ -148,27 +148,6 @@ function BrtExtensionsNumberWithUpDownArrow(props: BrtExtensionsNumberWithUpDown
       handleEvent(actions, 'change', propName, sliderDefaultValue);
     }
   }, [actions, displayAs, propName, sliderDefaultValue, value]);
-
-  const incrementValue = () => {
-    let val = 0;
-    if (integerValue === '') {
-      val = 1;
-    } else {
-      val = parseInt(integerValue, 10) + 1;
-    }
-
-    setIntegerValue(val.toString());
-  };
-
-  const decrementValue = () => {
-    let val = 0;
-    if (integerValue === '') {
-      val = -1;
-    } else {
-      val = parseInt(integerValue, 10) - 1;
-    }
-    setIntegerValue(val.toString());
-  };
 
   const { decimalPrecision, currencyDecimalPrecision = 'auto', currencyISOCode = 'USD' } = props;
   let noOfDecimals = parseInt(decimalPrecision, 10);
@@ -303,6 +282,29 @@ function BrtExtensionsNumberWithUpDownArrow(props: BrtExtensionsNumberWithUpDown
     }
   }
 
+  const incrementValue = () => {
+    let val = 0;
+    if (integerValue === '') {
+      val = 1;
+    } else {
+      val = parseInt(integerValue, 10) + 1;
+    }
+
+    setIntegerValue(val.toString());
+    onChangeHandler(val.toString());
+  };
+
+  const decrementValue = () => {
+    let val = 0;
+    if (integerValue === '') {
+      val = -1;
+    } else {
+      val = parseInt(integerValue, 10) - 1;
+    }
+    setIntegerValue(val.toString());
+    onChangeHandler(val.toString());
+  };
+
   const onResolveSuggestionHandler = (accepted: boolean) => {
     suggestionsHandler(accepted, pConn, setStatus);
   };
@@ -337,8 +339,8 @@ function BrtExtensionsNumberWithUpDownArrow(props: BrtExtensionsNumberWithUpDown
     </StyledBrtExtensionsNumberWithUpDownArrowWrapper>
   ) : (
     <StyledBrtExtensionsNumberWithUpDownArrowWrapper>
-      <InputContainer>
-        <NumberInput
+      <InputContainer style={{width:  '15em'} } >
+        <NumberInput  
           {...additionalProps}
           label={label}
           labelHidden={hideLabel}

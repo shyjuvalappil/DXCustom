@@ -1,5 +1,6 @@
 const handleEvent = (actions: any, eventType: string, propName: string, value: string) => {
   switch (eventType) {
+    
     case 'change':
       actions.updateFieldValue(propName, value);
       break;

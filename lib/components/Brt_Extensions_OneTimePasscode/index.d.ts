@@ -7,7 +7,6 @@ interface BrtExtensionsOneTimePasscodeProps extends PConnFieldProps {
     variant?: any;
     formatter: string;
     length?: number;
-    onComplete: (pin: string) => void;
 }
 export declare const formatExists: (formatterVal: string) => boolean;
 export declare const textFormatter: (formatter: string, value: string) => any;

@@ -1,10 +1,9 @@
-
 // @ts-nocheck
 export const configProps = {
   value: '',
   label: 'TextInput Sample',
-  placeholder: 'TextInput Placeholder',
-  helperText: 'TextInput Helper Text',
+  placeholder: '',
+  helperText: '',
   testId: 'TextInput-12345678',
   hasSuggestions: false,
   displayMode: '',
